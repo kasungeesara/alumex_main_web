@@ -1,0 +1,255 @@
+.about { color: #242424; }
+.container { width: calc(100% - var(--page-gutter) * 2); max-width: 1440px; margin-inline: auto; }
+.about h2 { font-size: clamp(34px, 3.7vw, 54px); font-weight: 600; line-height: 1.15; letter-spacing: -.035em; color: #171917; }
+.about h2 span, .bigPicture > div > p span { color: #62b744; }
+.hero { position: relative; isolation: isolate; overflow: hidden; height: clamp(480px, 52vw, 740px); margin: 12px; border-radius: 0 0 22px 22px; background: #1b302c; color: white; }
+.heroImage { object-fit: cover; object-position: center 52%; z-index: -2; }
+.heroShade { position: absolute; z-index: -1; inset: 0; background: linear-gradient(180deg, #0715121a 30%, #06110ec9); }
+.heroCopy { position: absolute; bottom: 10%; left: 4.8%; right: 4.8%; }
+.heroCopy h1 { font-size: clamp(54px, 6.8vw, 98px); font-weight: 500; line-height: 1.1; letter-spacing: -.035em; margin-top: 30px; }
+.eyebrow { display: flex; align-items: center; gap: 12px; font-size: 16px; line-height: 1.5; }
+.eyebrow > span { width: 14px; height: 14px; border-radius: 50%; background: #62b744; flex-shrink: 0; }
+.pageNavigation { display: flex; align-items: center; justify-content: center; gap: 42px; min-height: 82px; border-bottom: 1px solid #e4e8e0; background: white; }
+.pageNavigation a { position: relative; display: flex; align-items: center; justify-content: center; align-self: stretch; padding: 20px 4px; font-size: 17px; font-weight: 500; line-height: 1.4; color: #7a8175; text-align: center; transition: color .2s; }
+.pageNavigation a[aria-current="page"] { color: #448e32; font-weight: 600; }
+.pageNavigation a[aria-current="page"]::after { content: ""; position: absolute; bottom: -1px; left: 0; right: 0; height: 3px; border-radius: 3px 3px 0 0; background: #62b744; }
+.pageNavigation a:hover { color: #448e32; }
+.introduction { margin-top: 54px; color: #777d74; font-size: 18px; line-height: 1.75; }
+.introduction p + p { margin-top: 26px; }
+.bigPicture { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-top: 114px; }
+.bigPicture > div > p { max-width: 550px; margin-top: 58px; font-size: clamp(26px, 2.45vw, 36px); font-weight: 500; line-height: 1.4; letter-spacing: -.015em; }
+.picturePhoto { position: relative; overflow: hidden; aspect-ratio: 1.8; border-radius: 16px; }
+.coverImage { object-fit: cover; }
+.principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; margin-top: 108px; }
+.principleCard { position: relative; overflow: hidden; min-height: 360px; padding: 34px 30px; border: 1px solid #c5c8c1; border-radius: 15px; background: #fcfcfc; }
+.principleCard::before { content: ""; position: absolute; inset: 0 0 auto; height: 17px; background: #62b744; }
+.principleCard > div { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #addb9b; }
+.principleCard > div > span { font-size: 86px; font-weight: 500; line-height: 1.2; letter-spacing: -.045em; color: #b3b6b0; }
+.principleCard h3 { margin-top: 26px; font-size: 30px; line-height: 1.2; font-weight: 600; color: #161916; }
+.principleCard p { margin-top: 22px; color: #777d74; font-size: 17px; line-height: 1.65; }
+.productionSection { margin-top: 160px; }
+.productionSection > h2 { margin-top: 35px; }
+.productionGrid { display: grid; grid-template-columns: 1fr 1.08fr; gap: 80px; margin-top: 54px; }
+.prose { font-size: 18px; line-height: 1.85; color: #777d74; }
+.prose p + p { margin-top: 30px; }
+.prose a { color: #448e32; text-decoration: underline; text-underline-offset: 3px; }
+.productionPhoto { position: relative; overflow: hidden; border-radius: 16px; height: 400px; align-self: center; background: #f0f3ed; }
+.productionPhoto img { object-fit: contain; object-position: center; }
+.timelineSection { margin-top: 150px; }
+.timelineSection > h2 { margin-top: 34px; }
+.timeline { display: grid; grid-template-columns: 1fr 420px; align-items: center; gap: 64px; max-width: 1080px; margin: 38px auto 0; padding: 36px; border: 1px solid #e1e7dc; border-radius: 24px; background: #f8faf6; }
+.timelineCopy { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.timelineCopy select { width: 100%; max-width: 360px; min-height: 44px; padding: 10px 34px 10px 14px; border: 1px solid #dbe3d5; border-radius: 8px; background: white; color: #46523f; font-size: 14px; cursor: pointer; text-overflow: ellipsis; }
+.milestoneYear { display: block; margin-bottom: 12px; color: #5bad3c; font-size: 42px; line-height: 1; font-weight: 600; letter-spacing: -.04em; }
+.timelineCopy h3 { max-width: 390px; font-size: 26px; font-weight: 600; line-height: 1.25; letter-spacing: -.025em; }
+.timelineCopy p { max-width: 390px; margin-top: 12px; color: #737b6d; font-size: 16px; line-height: 1.65; }
+.timelinePhoto { position: relative; width: 100%; height: 270px; overflow: hidden; border-radius: 14px; background: #eef2e9; }
+.timelineImage { object-fit: contain; }
+.timelineCount { font-size: 14px; font-weight: 600; color: #376b2b; font-variant-numeric: tabular-nums; }
+.timelineCount > span { color: #959d8e; font-weight: 400; }
+.timelineSection > .carouselControls { margin-top: 22px; }
+.timelineSection .timelinePagination { display: none; }
+.carouselControls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 28px; }
+.carouselControls > button { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e8ebe4; color: #376b2b; cursor: pointer; transition: background .2s; }
+.carouselControls > button:hover:not(:disabled) { background: #d9edce; }
+.carouselControls > button:disabled { color: #b6beb0; cursor: default; }
+.pagination, .timelinePagination { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.pagination button, .timelinePagination button { position: relative; width: 20px; height: 32px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.pagination button::before, .timelinePagination button::before { content: ""; display: block; width: 12px; height: 12px; margin: auto; border-radius: 50%; background: #daddd6; }
+.pagination button[aria-current]::before, .timelinePagination button[aria-current]::before { background: #62b744; width: 20px; height: 9px; }
+.timelinePagination { gap: 3px; }
+.timelinePagination button { width: 16px; }
+.timelinePagination button::before { width: 8px; height: 8px; }
+.timelinePagination button[aria-current]::before { width: 16px; height: 6px; }
+.valuesSection { margin-top: 145px; padding-bottom: 120px; }
+.valuesHeading { display: grid; grid-template-columns: 1.2fr .8fr; align-items: start; gap: 80px; margin-top: 36px; }
+.valuesHeading > p { color: #777d74; font-size: 18px; line-height: 1.7; }
+.valuesGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 80px 65px; margin-top: 90px; }
+.valuesGrid h3 { display: flex; align-items: center; gap: 14px; font-size: 17px; line-height: 1.3; font-weight: 600; text-transform: uppercase; }
+.valuesGrid h3 svg { flex-shrink: 0; color: #62b744; }
+.valuesGrid p { margin-top: 24px; color: #777d74; font-size: 17px; line-height: 1.7; }
+.corporate { padding-top: 0; }
+.corporateIntro { max-width: 900px; margin: 0 auto 35px; text-align: center; padding-inline: 24px; }
+.corporateIntro .eyebrow { justify-content: center; font-size: 18px; }
+.corporateIntro h1 { margin-top: 32px; color: #1c201c; font-size: clamp(38px, 4.2vw, 60px); font-weight: 600; line-height: 1.2; letter-spacing: -.03em; }
+.corporateIntro h1 span { color: #62b744; }
+.corporateLead { margin-top: 28px; color: #7a8175; font-size: 18px; line-height: 1.65; }
+.corporateContainer { width: calc(100% - var(--page-gutter) * 2); max-width: 1180px; margin: 0 auto; padding: 64px 0 110px; }
+.companyGrid { display: grid; grid-template-columns: 1fr 1.06fr; gap: 26px; }
+.companyName { display: flex; align-items: center; flex-direction: column; justify-content: center; min-height: 485px; padding: 48px; border: 1px solid #a6aba1; border-radius: 15px; text-align: center; }
+.companyName > img { width: 100%; max-width: 390px; height: auto; max-height: 120px; object-fit: contain; }
+.companyName h2, .companyNumber h2, .stockListing h2 { font-size: 24px; font-weight: 600; line-height: 1.3; letter-spacing: -.015em; }
+.companyName h2 { margin-top: 54px; }
+.companyName p { margin-top: 32px; font-size: 27px; line-height: 1.5; color: #71776c; }
+.companyName p > span { font-size: 25px; }
+.companyFacts { display: grid; grid-template-rows: 1fr 1fr; gap: 24px; }
+.companyNumber { display: flex; align-items: center; justify-content: center; gap: 50px; padding: 30px; border: 1px solid #a6aba1; border-radius: 15px; background: #f0f7ec; }
+.companyNumber p { margin-top: 10px; font-size: 36px; line-height: 1.3; color: #687262; }
+.factIllustration { display: grid; place-items: center; width: 140px; height: 154px; flex-shrink: 0; border-radius: 16px; border: 1px solid #e3e8df; background: radial-gradient(circle, #e3f5de 60%, white 61%); color: #6ab784; }
+.stockListing { display: flex; align-items: center; justify-content: space-between; gap: 26px; padding: 30px; border-radius: 15px; background: #62b744; color: white; }
+.stockListing h2 { color: white; }
+.stockListing p { margin-top: 16px; font-size: 23px; font-weight: 500; line-height: 1.45; color: #d4ebca; }
+.stockListing strong { color: white; font-weight: 600; }
+.stockListing .factIllustration { width: 135px; }
+.membersSection { margin-top: 108px; }
+.memberLogos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; gap: 48px; margin-top: 60px; }
+.memberLogos > div, .bankLogos > div { display: flex; align-items: center; justify-content: center; min-width: 0; }
+.memberLogos img { width: 100%; height: 100px; object-fit: contain; }
+.companyContacts { display: grid; grid-template-columns: 1fr 1.05fr; gap: 32px; margin-top: 112px; }
+.contactColumn { display: flex; flex-direction: column; gap: 26px; }
+.contactCard { border: 1px solid #a6aba1; border-radius: 15px; padding: 40px 46px; color: #767c6f; flex: 1; }
+.contactCard h2 { color: inherit; font-size: 29px; line-height: 1.25; letter-spacing: -.02em; font-weight: 600; text-transform: uppercase; }
+.contactCard .smallCardTitle { font-size: 22px; }
+.greenCard { background: #62b744; border-color: #62b744; color: white; }
+.contactRow { display: flex; align-items: start; gap: 16px; margin-top: 24px; }
+.contactRow > svg { width: 24px; height: 24px; flex-shrink: 0; margin-top: 3px; stroke-width: 1.5; }
+.contactRow h3 { font-size: 20px; font-weight: 600; line-height: 1.3; }
+.contactRow p, .contactRow a { margin-top: 5px; font-size: 16px; line-height: 1.4; }
+.contactRow a { display: inline-block; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.corporatePhoto { position: relative; overflow: hidden; min-height: 290px; border-radius: 15px; background: #203f2a; }
+.corporatePhoto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 20%, #0f2210d9); }
+.corporatePhoto > div { position: absolute; z-index: 1; bottom: 25px; left: 28px; right: 28px; color: white; font-size: 20px; line-height: 1.5; }
+.corporatePhoto > div > * { display: block; }
+.corporatePhoto strong { font-size: 25px; font-weight: 600; }
+.teamSection { margin-top: 120px; }
+.peopleGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; margin-top: 60px; }
+.personCard { display: flex; align-items: center; flex-direction: column; min-height: 360px; padding: 42px 18px 34px; border: 1px solid #79bb64; border-radius: 16px; text-align: center; }
+.portrait { position: relative; width: 144px; height: 144px; border-radius: 50%; overflow: hidden; background: #f0f4ec; }
+.portraitImage { object-fit: cover; object-position: center 15%; }
+.personCard h3 { margin-top: 25px; font-size: 17px; font-weight: 600; line-height: 1.3; letter-spacing: .015em; color: #62b744; }
+.personCard p { margin-top: 24px; max-width: 210px; font-size: 14px; line-height: 1.45; color: #3f4939; }
+.banksSection { margin-top: 115px; }
+.bankLogos { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; gap: 45px; margin-top: 55px; }
+.bankLogos > div { height: 110px; overflow: hidden; }
+.bankLogos img { width: 100%; height: auto; flex-shrink: 0; object-fit: contain; }
+.bankLogos img[alt="Sampath Bank"] { transform: scale(1.5); }
+.bankLogos img[alt="Bank of Ceylon"] { transform: scale(1.25); }
+.bankLogos img[alt="Hatton National Bank"] { transform: scale(1.35); }
+.bankLogos img[alt="Standard Chartered"] { transform: scale(1.2); }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 1150px) {
+  .bigPicture, .productionGrid, .valuesHeading { gap: 40px; }
+  .principles { gap: 26px; }
+  .principleCard { padding-inline: 24px; }
+  .principleCard > div > span { font-size: 70px; }
+  .companyName { padding: 32px; }
+  .companyNumber { gap: 24px; padding: 24px; }
+  .factIllustration { width: 110px; height: 130px; }
+  .stockListing { padding: 24px; gap: 20px; }
+  .stockListing p { font-size: 20px; }
+  .stockListing .factIllustration { width: 110px; }
+  .contactCard { padding: 32px; }
+  .peopleGrid { gap: 24px; }
+  .portrait { width: 130px; height: 130px; }
+}
+@media (max-width: 1000px) {
+  .companyGrid { grid-template-columns: 1fr; }
+  .companyName { min-height: 350px; }
+  .companyFacts { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .companyNumber { flex-direction: column; gap: 22px; text-align: center; }
+  .stockListing { flex-direction: column-reverse; align-items: start; }
+  .companyContacts { gap: 24px; }
+  .contactCard { padding: 28px; }
+  .contactCard h2 { font-size: 24px; }
+  .peopleGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .personCard { min-height: 345px; }
+}
+@media (max-width: 800px) {
+  .hero { margin: 8px; min-height: 510px; height: 68svh; max-height: 680px; }
+  .heroCopy { bottom: 10%; left: 24px; right: 24px; }
+  .heroCopy h1 { font-size: 58px; margin-top: 22px; }
+  .pageNavigation { gap: 26px; min-height: 70px; }
+  .pageNavigation a { font-size: 15px; padding-block: 19px; }
+  .introduction { margin-top: 36px; font-size: 16px; }
+  .bigPicture { grid-template-columns: 1fr; gap: 32px; margin-top: 72px; }
+  .bigPicture > div > p { margin-top: 28px; max-width: 600px; }
+  .picturePhoto { aspect-ratio: 1.8; }
+  .principles { gap: 18px; margin-top: 56px; }
+  .principleCard { min-height: 330px; padding: 28px 18px; }
+  .principleCard > div > span { font-size: 58px; }
+  .principleCard > div > svg { width: 34px; }
+  .principleCard h3 { font-size: 24px; }
+  .principleCard p { font-size: 15px; }
+  .productionSection, .timelineSection, .valuesSection { margin-top: 88px; }
+  .productionGrid { grid-template-columns: 1fr; gap: 32px; margin-top: 36px; }
+  .prose { font-size: 16px; }
+  .productionPhoto { height: auto; aspect-ratio: 1.5; width: 100%; }
+  .valuesHeading { grid-template-columns: 1fr; gap: 25px; margin-top: 28px; }
+  .valuesHeading > p { max-width: 500px; font-size: 16px; }
+  .valuesGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 42px 32px; margin-top: 48px; }
+  .valuesGrid p { font-size: 16px; margin-top: 18px; }
+  .valuesSection { padding-bottom: 72px; }
+  .corporate { padding-top: 125px; }
+  .corporateIntro h1 { font-size: 44px; }
+  .corporateLead { font-size: 16px; }
+  .corporateContainer { padding-top: 40px; padding-bottom: 70px; }
+  .membersSection, .companyContacts, .teamSection, .banksSection { margin-top: 75px; }
+  .memberLogos { gap: 28px; margin-top: 35px; }
+  .memberLogos img { height: 80px; }
+  .companyContacts { grid-template-columns: 1fr; }
+  .corporatePhoto { min-height: 320px; }
+  .peopleGrid { margin-top: 36px; }
+  .bankLogos { gap: 28px; margin-top: 32px; }
+  .bankLogos > div { height: 80px; }
+}
+@media (max-width: 550px) {
+  .about h2 { font-size: 34px; }
+  .heroCopy h1 { font-size: 50px; }
+  .pageNavigation { justify-content: space-between; gap: 12px; }
+  .pageNavigation a { font-size: 14px; padding-inline: 2px; }
+  .principles { grid-template-columns: 1fr; gap: 22px; }
+  .principleCard { min-height: 0; padding: 30px 26px; }
+  .principleCard > div > span { font-size: 72px; }
+  .principleCard h3 { font-size: 28px; margin-top: 18px; }
+  .principleCard p { font-size: 16px; margin-top: 15px; }
+  .carouselControls { gap: 9px; }
+  .valuesGrid { grid-template-columns: 1fr; gap: 32px; }
+  .valuesGrid p { margin-left: 40px; }
+  .corporateIntro h1 { font-size: 38px; }
+  .corporateIntro .eyebrow { font-size: 16px; }
+  .companyName { min-height: 380px; padding: 30px; }
+  .about .companyName h2 { font-size: 23px; margin-top: 36px; }
+  .companyName p { font-size: 25px; margin-top: 24px; }
+  .companyName p > span { font-size: 21px; }
+  .companyFacts { grid-template-columns: 1fr; }
+  .companyNumber { flex-direction: row; text-align: left; padding: 28px 20px; }
+  .about .companyNumber h2, .about .stockListing h2 { font-size: 23px; }
+  .companyNumber p { font-size: 30px; }
+  .factIllustration { width: 90px; height: 110px; }
+  .factIllustration svg { width: 64px; }
+  .stockListing { flex-direction: row; gap: 16px; padding: 28px 20px; }
+  .stockListing p { font-size: 18px; }
+  .stockListing .factIllustration { width: 85px; height: 110px; }
+  .memberLogos { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .contactCard { padding: 30px 24px; }
+  .about .contactCard h2 { font-size: 25px; }
+  .contactRow h3 { font-size: 18px; }
+  .peopleGrid { grid-template-columns: 1fr; }
+  .personCard { min-height: 350px; padding-top: 35px; }
+  .portrait { width: 150px; height: 150px; }
+  .personCard h3 { font-size: 18px; }
+  .personCard p { font-size: 15px; }
+  .pagination { gap: 4px; }
+  .pagination button { width: 17px; }
+  .pagination button[aria-current]::before { width: 17px; }
+  .bankLogos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+  .bankLogos > div:last-child { grid-column: 1 / -1; max-width: 180px; justify-self: center; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .pageNavigation a, .carouselControls > button { transition: none; } }
+
+@media (max-width: 1000px) {
+  .timeline { grid-template-columns: 1fr 360px; gap: 28px; padding: 28px; }
+  .timelinePhoto { height: 240px; }
+}
+@media (max-width: 800px) {
+  .timeline { grid-template-columns: 1fr 300px; gap: 24px; padding: 24px; }
+  .timelinePhoto { height: 220px; }
+  .timelineCopy h3 { font-size: 23px; }
+  .milestoneYear { font-size: 36px; }
+}
+@media (max-width: 650px) {
+  .timeline { grid-template-columns: 1fr; gap: 24px; margin-top: 28px; padding: 22px; border-radius: 18px; }
+  .timelinePhoto { height: auto; aspect-ratio: 1.6; max-width: 420px; justify-self: center; }
+  .timelineCopy { gap: 22px; }
+  .timelineCopy select { max-width: none; }
+}

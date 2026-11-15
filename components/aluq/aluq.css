@@ -1,0 +1,159 @@
+.aluq-widget { position: relative; z-index: 110; font-family: inherit; }
+.aluq-window { position: relative; z-index: 2; }
+.aluq-launcher { position: fixed; z-index: 1; right: 24px; bottom: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px; width: 80px; height: 80px; padding: 6px; border: 2px solid var(--green); border-radius: 8px; background: #fff; color: #315d24; box-shadow: 0 8px 30px #14230e20; cursor: pointer; transition: background .2s, transform .2s; }
+.aluq-launcher:hover { background: #fff; transform: translateY(-2px); }
+.aluq-launcher > svg { color: var(--green); }
+.aluq-online-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px #62bd4666; }
+.aluq-launcher > span { display: flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 600; letter-spacing: .02em; }
+.aluq-launcher small { border-radius: 4px; padding: 3px 5px; color: #bce4a9; background: #ffffff12; font-size: 8px; letter-spacing: .1em; }
+.aluq-widget button, .aluq-widget input, .aluq-widget textarea { font: inherit; }
+.aluq-widget button { cursor: pointer; }
+.aluq-widget button:disabled { opacity: .45; cursor: not-allowed; }
+.aluq-widget :is(button, a, input, textarea):focus-visible { outline: 2px solid #62bd46; outline-offset: 3px; }
+.aluq-panel, .aluq-loading { position: fixed; right: 24px; bottom: 114px; width: min(420px, calc(100vw - 32px)); border: 1px solid var(--green); border-radius: 12px; background: #fff; color: #293426; box-shadow: 0 24px 100px #0c1e1638; }
+.aluq-panel { display: flex; flex-direction: column; height: min(730px, calc(100dvh - 140px)); overflow: hidden; }
+.aluq-window:not([hidden]) :is(.aluq-panel, .aluq-loading) { transform-origin: bottom right; animation: aluq-enter .38s cubic-bezier(.2, .8, .2, 1) both; }
+.aluq-window-closing:not([hidden]) :is(.aluq-panel, .aluq-loading) { pointer-events: none; animation: aluq-exit .26s ease-in both; }
+.aluq-loading { padding: 30px; font-size: 13px; }
+.aluq-header { position: relative; isolation: isolate; overflow: hidden; display: flex; flex-shrink: 0; align-items: center; gap: 10px; padding: 18px; border-bottom: 1px solid var(--green); background: #000; color: #fff; }
+.aluq-header > .aluq-banner-rays { position: absolute; inset: 0; z-index: -1; }
+.aluq-brand { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.aluq-brand-logo { width: 110px; height: auto; object-fit: contain; filter: brightness(0) invert(1); }
+.aluq-brand-caption { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+.aluq-header h2 { margin: 0; font-size: 12px; font-weight: 600; line-height: 1.2; letter-spacing: .02em; color: #fff; }
+.aluq-header h2 span { font-weight: 400; font-size: 11px; color: #d2e5cb; }
+.aluq-header p { display: flex; gap: 5px; align-items: center; margin-top: 4px; font-size: 10px; color: #d2e5cb; }
+.aluq-header i { display: block; width: 5px; height: 5px; background: var(--green); border-radius: 50%; }
+.aluq-header > button { display: grid; place-items: center; flex-shrink: 0; width: 36px; height: 36px; border-radius: 8px; background: #ffffff0a; color: #fff; border: 1px solid var(--green); }
+.aluq-header > button:first-of-type { margin-left: auto; }
+.aluq-header > button:hover { background: #ffffff20; }
+.aluq-tabs { display: flex; flex-shrink: 0; align-items: center; justify-content: space-around; gap: 3px; padding: 8px 12px; border-bottom: 1px solid #e5eade; background: #fff; }
+.aluq-tabs button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 36px; padding: 8px 12px; border: 0; border-radius: 8px; color: #718166; font-size: 11px; background: transparent; }
+.aluq-tabs [aria-current="page"] { color: #2e6220; background: #eff5e9; font-weight: 600; }
+.aluq-body { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 18px; scrollbar-width: thin; scrollbar-color: #cfdbc5 transparent; }
+.aluq-message { margin-bottom: 16px; font-size: 13px; line-height: 1.7; }
+.aluq-message > p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.aluq-knowledge-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; padding: 7px 10px; border: 1px solid var(--green); border-radius: 6px; color: #3d722b; font-size: 11px; }
+.aluq-message-assistant { padding: 14px; border: 1px solid #e4eadc; border-radius: 2px 14px 14px; background: #fff; }
+.aluq-message-author { display: block; margin-bottom: 6px; font-size: 9px; letter-spacing: .13em; color: #60944a; font-weight: 600; }
+.aluq-message-user { width: fit-content; max-width: 90%; margin-left: auto; padding: 11px 15px; border-radius: 14px 2px 14px 14px; background: #e7f1de; color: #355128; }
+.aluq-typing { width: fit-content; min-width: 90px; }
+.aluq-typing-dots { display: flex; align-items: center; gap: 5px; min-height: 16px; }
+.aluq-typing-dots i { width: 6px; height: 6px; border-radius: 50%; background: #62a448; animation: aluq-dot 1.2s ease-in-out infinite; }
+.aluq-typing-dots i:nth-child(2) { animation-delay: .15s; }
+.aluq-typing-dots i:nth-child(3) { animation-delay: .3s; }
+.aluq-quick-replies { display: flex; flex-wrap: wrap; gap: 7px; padding-bottom: 8px; }
+.aluq-quick-replies button { border: 1px solid var(--green); border-radius: 8px; min-height: 36px; padding: 8px 12px; font-size: 11px; background: #fff; color: #4c773b; transition: background .2s; }
+.aluq-quick-replies button:hover { background: #eaf3e2; }
+.aluq-composer { display: flex; align-items: center; gap: 8px; flex-shrink: 0; margin: 0 14px 8px; padding: 6px; border: 1px solid #dce5d5; border-radius: 12px; background: #fff; }
+.aluq-composer input { min-width: 0; flex: 1; border: 0; background: transparent; padding: 10px; color: #293426; font-size: 13px; }
+.aluq-widget .aluq-composer input:focus-visible { outline: none; }
+.aluq-composer input::placeholder { color: #89977f; }
+.aluq-composer button { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--green); border-radius: 8px; background: #fff; color: #467434; }
+.aluq-footer { flex-shrink: 0; padding: 7px 14px 12px; text-align: center; font-size: 9px; color: #84937a; }
+.aluq-view-intro { margin-bottom: 20px; }
+.aluq-view-intro h3, .aluq-empty h3, .aluq-receipt h3 { font-size: 18px; font-weight: 600; letter-spacing: -.02em; }
+.aluq-view-intro p, .aluq-empty p, .aluq-receipt p { margin-top: 8px; color: #76836c; font-size: 12px; line-height: 1.7; }
+.aluq-product { overflow: hidden; margin: 14px 0; border: 1px solid #dfe7d8; border-radius: 12px; background: #fff; }
+.aluq-product-image { position: relative; height: 130px; background: #edf2e8; }
+.aluq-product-image img { object-fit: cover; }
+.aluq-product-copy { padding: 13px; }
+.aluq-product h3 { font-size: 16px; font-weight: 600; line-height: 1.25; }
+.aluq-product p { margin-top: 7px; color: #718166; font-size: 11px; line-height: 1.65; }
+.aluq-product .aluq-product-reason { padding: 9px; background: #f4f8ef; border-radius: 6px; color: #50733d; }
+.aluq-product details { margin-top: 11px; font-size: 11px; }
+.aluq-product summary { color: #4e763d; cursor: pointer; padding-block: 5px; }
+.aluq-spec { margin-top: 10px; line-height: 1.7; color: #718166; }
+.aluq-spec strong { font-weight: 600; color: #506346; }
+.aluq-spec ul { padding-left: 16px; list-style: disc; }
+.aluq-product-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 9px; margin-top: 14px; }
+.aluq-product-actions a, .aluq-product-actions button { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; color: #3e6f2b; }
+.aluq-product-actions button { padding: 8px 10px; min-height: 36px; border-radius: 7px; background: #fff; border: 1px solid var(--green); }
+.aluq-product-actions a { padding-block: 8px; text-decoration: underline; text-underline-offset: 3px; }
+.aluq-inquiry fieldset { margin-bottom: 22px; border: 0; padding: 0; min-width: 0; }
+.aluq-inquiry legend { margin-bottom: 12px; font-size: 13px; font-weight: 600; color: #405b31; }
+.aluq-inquiry label { display: block; margin-top: 12px; font-size: 11px; font-weight: 500; color: #66785b; }
+.aluq-inquiry input:not([type="checkbox"]), .aluq-inquiry textarea { display: block; width: 100%; margin-top: 5px; padding: 11px 12px; border: 1px solid #d9e3d0; border-radius: 8px; color: #2c3d23; background: #fff; font-size: 13px; }
+.aluq-inquiry textarea { resize: vertical; min-height: 70px; }
+.aluq-selected { display: flex; align-items: center; justify-content: space-between; padding: 6px 11px; margin-bottom: 6px; border-radius: 7px; background: #edf3e6; font-size: 12px; }
+.aluq-selected button { display: grid; place-items: center; width: 36px; height: 36px; border: 0; background: transparent; color: #657c58; }
+.aluq-inquiry .aluq-consent { display: flex; align-items: flex-start; gap: 8px; line-height: 1.6; margin: 10px 0 18px; }
+.aluq-consent input { margin-top: 3px; accent-color: var(--green); }
+.aluq-primary { display: inline-flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 44px; border: 1px solid var(--green); border-radius: 8px; padding: 12px 15px; background: #fff; color: #315d24; font-size: 12px !important; font-weight: 500 !important; }
+.aluq-primary:hover, .aluq-composer button:hover, .aluq-product-actions button:hover { background: #f0f9ec; }
+.aluq-text-button { display: inline-flex; align-items: center; gap: 3px; padding: 10px 0; border: 0; background: transparent; color: #4d7839; font-size: 11px !important; }
+.aluq-empty, .aluq-receipt { text-align: center; padding: 25px 8px; }
+.aluq-empty > svg, .aluq-receipt > svg { margin: 0 auto 18px; color: #70a655; }
+.aluq-empty .aluq-primary, .aluq-receipt .aluq-primary { margin-top: 22px; }
+.aluq-receipt > strong { display: inline-block; padding: 12px 15px; margin: 18px 0 10px; border: 1px dashed #bfd4ad; border-radius: 8px; color: #4d7839; font-size: 12px; }
+.aluq-receipt a { color: #3f7528; text-decoration: underline; }
+.aluq-error { flex-shrink: 0; margin: 8px 14px 0; padding: 10px; border-radius: 8px; background: #fff1e8; color: #8e4c2c; font-size: 11px; line-height: 1.6; }
+.aluq-success { padding: 12px; border-radius: 8px; background: #eaf3e2; color: #477334; font-size: 12px; line-height: 1.7; }
+.aluq-inquiry-progress { padding: 45px 12px; text-align: center; }
+.aluq-inquiry-progress > svg { margin: 0 auto 22px; color: var(--green); animation: aluq-spin 1s linear infinite; }
+.aluq-inquiry-progress h3 { font-size: 18px; font-weight: 600; }
+.aluq-inquiry-progress p { margin-top: 10px; font-size: 12px; line-height: 1.7; color: #63785c; }
+.aluq-inquiry-progress small { display: block; margin-top: 16px; color: #718166; font-size: 10px; }
+.aluq-progress-track { height: 4px; margin: 24px 15px 0; overflow: hidden; border-radius: 4px; background: #edf4e6; }
+.aluq-progress-track span { display: block; width: 100%; height: 100%; background: var(--green); transform-origin: left; animation: aluq-progress .9s ease-out both; }
+.aluq-receipt-summary { margin: 0 0 20px; border: 1px solid var(--green); border-radius: 10px; padding: 16px; }
+.aluq-receipt-summary h4 { margin-bottom: 12px; font-size: 13px; font-weight: 600; }
+.aluq-receipt-summary dl > div { display: grid; grid-template-columns: 1fr 1.3fr; gap: 12px; padding-block: 8px; border-top: 1px solid #e8eee2; font-size: 11px; line-height: 1.6; }
+.aluq-receipt-summary dt { color: #718166; }
+.aluq-receipt-summary dd { overflow-wrap: anywhere; }
+/* Softer surfaces and compact controls for the assistant. */
+.aluq-launcher { flex-direction: column; gap: 8px; width: 96px; height: 96px; padding: 10px 6px; border: 1px solid #83d569; border-radius: 14px; background: linear-gradient(120deg, #245b20 0%, #38862c 25%, #62bd46 45%, #8add68 50%, #62bd46 55%, #245b20 80%, #38862c 100%); background-size: 250% 250%; color: #fff; box-shadow: 0 0 0 4px #62bd461c, 0 8px 30px #315d2440; animation: aluq-launcher-gradient 3s ease-in-out infinite; transition: width .4s cubic-bezier(.2, .8, .2, 1), height .4s cubic-bezier(.2, .8, .2, 1), padding .4s, gap .4s, border-radius .4s, filter .4s, box-shadow .4s, transform .2s; }
+.aluq-launcher:hover { background: linear-gradient(120deg, #245b20 0%, #38862c 25%, #62bd46 45%, #8add68 50%, #62bd46 55%, #245b20 80%, #38862c 100%); background-size: 250% 250%; box-shadow: 0 0 0 6px #62bd4624, 0 12px 34px #315d244d; }
+.aluq-launcher > svg { flex-shrink: 0; color: #fff; }
+.aluq-launcher > span { gap: 5px; max-height: 20px; overflow: hidden; font-size: 10px; font-weight: 700; letter-spacing: -.01em; white-space: nowrap; color: #fff; transition: opacity .2s, max-height .4s, transform .4s, visibility 0s; }
+.aluq-launcher .aluq-online-dot { background: #fff; box-shadow: 0 0 0 3px #ffffff38; }
+.aluq-launcher[aria-expanded="true"] { width: 56px; height: 56px; padding: 9px; gap: 0; border-radius: 16px; filter: grayscale(1); box-shadow: 0 0 0 3px #777b752b, 0 8px 24px #1a20183d; animation-play-state: paused; }
+.aluq-launcher[aria-expanded="true"] > span { opacity: 0; max-height: 0; transform: translateY(-6px); visibility: hidden; pointer-events: none; transition: opacity .18s, max-height .4s, transform .4s, visibility 0s .4s; }
+.aluq-panel, .aluq-loading { width: min(440px, calc(100vw - 32px)); border-color: #dfe7dc; border-radius: 24px; background: #f7f9f6; box-shadow: 0 24px 80px #0c1e162b, 0 4px 16px #0c1e1610; }
+.aluq-header { padding: 22px 20px; border-bottom-color: #ffffff14; }
+.aluq-header > button { border-color: #ffffff24; border-radius: 12px; background: #ffffff0d; }
+.aluq-tabs { gap: 4px; margin: 14px 18px 0; padding: 4px; border: 1px solid #e4eae1; border-radius: 14px; background: #edf1eb; }
+.aluq-tabs button { flex: 1; padding-inline: 10px; border-radius: 10px; color: #64705e; }
+.aluq-tabs [aria-current="page"] { color: #315d24; background: #fff; box-shadow: 0 2px 5px #14230e0a; }
+.aluq-message-assistant { padding: 16px; border-color: #e7ece4; border-radius: 6px 18px 18px; box-shadow: 0 2px 8px #14230e04; }
+.aluq-message-user { border-radius: 18px 6px 18px 18px; background: #e4f3dc; color: #28491f; }
+.aluq-quick-replies button { border-color: #d8e6d2; border-radius: 999px; padding-inline: 13px; color: #426535; }
+.aluq-composer { margin: 4px 16px 0; padding: 7px; border-radius: 18px; box-shadow: 0 4px 16px #14230e06; transition: border-color .2s, box-shadow .2s; }
+.aluq-composer:focus-within { border-color: var(--green); box-shadow: 0 0 0 3px #62bd4614; }
+.aluq-composer button { flex-shrink: 0; width: 40px; height: 40px; border: 0; border-radius: 12px; background: var(--green); color: #10230d; }
+.aluq-composer button:hover { background: #79cc5f; }
+.aluq-product { border-radius: 18px; }
+@keyframes aluq-launcher-gradient { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes aluq-spin { to { transform: rotate(360deg); } }
+@keyframes aluq-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes aluq-enter { from { opacity: 0; transform: translateY(22px) scale(.94); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes aluq-exit { from { opacity: 1; transform: translateY(0) scale(1); } to { opacity: 0; transform: translateY(18px) scale(.96); } }
+@keyframes aluq-dot { 0%, 60%, 100% { opacity: .35; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-4px); } }
+@media (max-width: 600px) {
+  .aluq-launcher { right: 16px; bottom: max(14px, env(safe-area-inset-bottom)); width: 88px; height: 88px; padding: 8px 4px; }
+  .aluq-launcher[aria-expanded="true"] { width: 52px; height: 52px; padding: 8px; }
+  .aluq-panel, .aluq-loading { right: 12px; width: calc(100vw - 24px); bottom: calc(100px + env(safe-area-inset-bottom)); }
+  .aluq-panel { height: min(690px, calc(100dvh - 120px - env(safe-area-inset-bottom))); border-radius: 20px; }
+  .aluq-header { padding: 12px; }
+  .aluq-header > button { width: 40px; height: 40px; }
+  .aluq-body { padding: 14px; }
+  .aluq-tabs button { min-height: 40px; padding-inline: 9px; }
+  .aluq-inquiry input:not([type="checkbox"]), .aluq-inquiry textarea, .aluq-composer input { font-size: 16px; }
+  .aluq-quick-replies button, .aluq-product-actions button, .aluq-product-actions a { min-height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aluq-inquiry-progress > svg, .aluq-progress-track span { animation: none; }
+  .aluq-window:not([hidden]) :is(.aluq-panel, .aluq-loading), .aluq-typing-dots i { animation: none; }
+  .aluq-launcher, .aluq-launcher > span, .aluq-quick-replies button { transition: none; }
+  .aluq-launcher { animation: none; }
+  .aluq-launcher:hover { transform: none; }
+}
+
+/* Match the architectural site palette while retaining the product assistant. */
+.aluq-widget .aluq-launcher { width: 76px; height: 76px; border-radius: 50%; border: 1px solid #f3f3ec80; background: #340c24; color: #f3f3ec; box-shadow: 0 4px 22px #17233b20; animation: none; }
+.aluq-widget .aluq-launcher:hover { background: #51233f; box-shadow: 0 4px 25px #17233b30; }
+.aluq-widget .aluq-launcher>svg { width: 19px; height: 22px; }
+.aluq-widget .aluq-launcher>span { font-size: 8px; letter-spacing: .02em; }
+.aluq-widget .aluq-launcher[aria-expanded="true"] { width: 52px; height: 52px; border-radius: 50%; }
+body:has(.era-header-open) .aluq-widget { visibility: hidden; }
+@media(max-width:700px){.aluq-widget .aluq-launcher{width:64px;height:64px;gap:5px;right:15px;bottom:15px}.aluq-widget .aluq-launcher>span{font-size:7px}}
